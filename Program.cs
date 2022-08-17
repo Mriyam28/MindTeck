@@ -82,10 +82,6 @@ namespace Delegate
             delObj4(49, 7);
     
         }
-
-        
-
-
   
         }
     }

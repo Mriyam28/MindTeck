@@ -40,3 +40,70 @@ namespace MyApp
         
     }
 }
+//Delegate in C#
+using System;
+using System.Linq;
+
+namespace Delegate 
+{
+    internal class Program
+    {
+        public delegate void addnumber(int a, int b);
+        public delegate void subnumber(int a, int b);
+        public delegate void multinumber(int a, int b);
+        public delegate void divinumber(int a, int b);
+        public void sum(int a, int b)
+        {
+            Console.WriteLine("{0}", a+b);
+        }
+        public void sub(int a, int b)
+        {
+            Console.WriteLine("{0}", a - b);
+        }
+        public void mul(int a, int b)
+        {
+            Console.WriteLine("{0}", a * b);
+        }
+        public void div(int a, int b)
+        {
+            Console.WriteLine("{0}", a / b);
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+            addnumber delObj1 = new addnumber(obj.sum);
+            subnumber delObj2 =new subnumber(obj.sub);
+            multinumber delObj3 = new multinumber(obj.mul);
+            divinumber delObj4 = new divinumber(obj.div);
+
+            delObj1 (23,10);
+            delObj2(24, 7);
+            delObj3(12, 6);
+            delObj4(49, 7);
+    
+        }
+
+        
+
+
+  
+        }
+    }
+
+// TryCatchMethod in C#
+using System;
+class TryCatchMethod {
+  static void Main() {
+   try
+{
+  int[] arr = {1, 2, 3};
+  Console.WriteLine(arr[2]);
+  Console.WriteLine(arr[10]);
+}
+catch (Exception ex)
+{
+  Console.WriteLine(ex.Message);
+}
+  }
+}
+

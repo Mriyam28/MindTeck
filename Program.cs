@@ -140,5 +140,61 @@ namespace oopsConcepts
         }
       }
 }
+//Access Modifiers in C#
+using System;
+namespace publicAccessModifier
+{
+
+    class Car
+    {
+
+        // Declaring members rollNo
+        // and name as public
+        public int modelno;
+        public string name;
+
+        // Constructor
+        public Car(int m, string n)
+        {
+            modelno = m;
+            name = n;
+        }
+
+        // methods getRollNo and getName
+        // also declared as public
+        public int getmodelno()
+        {
+            return modelno;
+        }
+        public string getName()
+        {
+            return name;
+        }
+    }
+
+    class Program
+    {
+
+        // Main Method
+        static void Main(string[] args)
+        {
+            // Creating object of the class Student
+            Car C = new Car(911, "Porsche Caynenne");
+
+            // Displaying details directly
+            // using the class members
+            // accessible through another method
+            Console.WriteLine("Model number: {0}", C.modelno);
+            Console.WriteLine("Name: {0}", C.name);
+
+            Console.WriteLine();
+
+            // Displaying details using
+            // member method also public
+            Console.WriteLine("Model number: {0}", C.getmodelno());
+            Console.WriteLine("Name: {0}", C.getName());
+        }
+    }
+}
 
 

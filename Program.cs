@@ -264,5 +264,56 @@ class D
         Console.ReadLine();
     }
 }
+// polymorphism method overloading
+using System;
+public class A
+{
+    public void f1()//without aguments
+    {
+        Console.WriteLine("method without arguments");
+
+    }  
+    public void f1(int i, int j)//with two arguments
+    {
+        Console.WriteLine(i + j);
+    }
+}
+public class B
+{
+    static void Main(string[] args)
+    {
+        A a = new A();
+        a.f1();
+        a.f1(75, 5);
+        Console.ReadLine();
+    }
+}
+//polymorphism method overriding
+using System;
+public class A
+{
+    public void f1()
+    {
+        Console.WriteLine("Method of base class");
+    }
+    public class B : A
+    {
+        public void f1()
+        {
+            Console.WriteLine("Hi, Mriyam from derive class");
+        }
+
+    }
+    class C
+    {
+        static void Main(string[] args)
+        {
+            B b = new B();
+            b.f1();
+            Console.ReadLine();
+        }
+    }
+}
+
 
 

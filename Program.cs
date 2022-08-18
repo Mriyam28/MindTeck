@@ -314,6 +314,36 @@ public class A
         }
     }
 }
+//Abstracts Method
+using System;
+public abstract class A
+{
+    public abstract void f1();
+        public void f2()
+    {
+        Console.WriteLine("f2");
+    }
+
+
+}
+class B : A
+{
+    public override void f1()
+    {
+        Console.WriteLine("Mriyam");
+    }
+}
+public class main
+{
+    static void Main(string[] args)
+    {
+        B b = new B();
+        b.f1();
+        b.f2();
+        Console.ReadLine();
+
+    }
+}
 
 
 

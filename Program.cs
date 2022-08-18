@@ -103,3 +103,42 @@ catch (Exception ex)
   }
 }
 
+// OOPS in C#
+using System;
+
+namespace oopsConcepts
+{
+    class OOPS
+    {
+        string Variant;
+         string color = "Grey";
+      int mileage = 17;
+        string mileage_variable="Km/Hour";
+        string CarName;
+        public void Steer()
+        {
+            Console.WriteLine("Model Name"+"......."+ " 2022 Porsche Cayenne");
+        }
+        static void Main(string[] args)
+        {
+            OOPS myObject = new OOPS();
+           myObject.Variant = "Diesel";
+            Console.WriteLine("Diesel or Petrol?");
+            Console.WriteLine(myObject.Variant);
+            Console.WriteLine("Mileage dude?");
+            Console.WriteLine(myObject.mileage+" "+myObject.mileage_variable);
+            Console.WriteLine("Tell me about your color:");
+            Console.WriteLine(myObject.color);
+            myObject.CarName = "Porsche";
+            Console.WriteLine("Which Brand?");
+            Console.WriteLine(myObject.CarName);
+
+
+           myObject.Steer();
+
+           Console.ReadLine();
+        }
+      }
+}
+
+

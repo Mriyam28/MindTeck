@@ -148,7 +148,7 @@ namespace publicAccessModifier
     class Car
     {
 
-        // Declaring members rollNo
+        // Declaring members modelno
         // and name as public
         public int modelno;
         public string name;
@@ -160,7 +160,7 @@ namespace publicAccessModifier
             name = n;
         }
 
-        // methods getRollNo and getName
+        // methods getmodelno and getName
         // also declared as public
         public int getmodelno()
         {
@@ -178,7 +178,7 @@ namespace publicAccessModifier
         // Main Method
         static void Main(string[] args)
         {
-            // Creating object of the class Student
+            // Creating object of the class Car
             Car C = new Car(911, "Porsche Caynenne");
 
             // Displaying details directly

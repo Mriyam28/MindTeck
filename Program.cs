@@ -197,4 +197,72 @@ namespace publicAccessModifier
     }
 }
 
+//single level inheritance
+using System;
+public class A//base class
+{
+    public int i = 23;
+    public void f1()
+    {
+        Console.WriteLine("Method of base class");
+
+           }
+
+}
+public class B: A// derived class/child class
+{
+     int j = 27;
+    public void multi()
+   {
+       Console.WriteLine(i * j);
+    }
+}
+ class C
+{
+    public static void Main(string[] args)
+    {
+       B b = new B();
+       b.f1();
+       b.multi();
+
+       Console.ReadLine();
+
+   }
+}
+
+ Multiple level Inheritance
+using System;
+public class A
+{
+    public void m1()
+    {
+        Console.WriteLine("method of class A");
+    }
+}
+public class B : A
+{
+    public void m2()
+    {
+        Console.WriteLine("Method of class B");
+    }
+}
+public class C:B
+{
+    public void m3()
+    {
+        Console.WriteLine("Method of class C");
+    }
+}
+class D
+{
+     static void Main(string[] args)
+    {
+        C c1=new C();
+        c1.m1();
+        c1.m2();
+        c1.m3();
+        Console.ReadLine();
+    }
+}
+
 

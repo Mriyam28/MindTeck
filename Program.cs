@@ -344,6 +344,55 @@ public class main
 
     }
 }
+//Two dimensional array to one dimensional array
+using System;
+
+class Conversion_of_array
+{
+    static void Main(string[] args)
+    {
+        int[,] twodarr = new int[3, 3];
+        Console.Write("Enter 2D Array Elements : ");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                twodarr[i, j] = Convert.ToInt32(Console.ReadLine());
+               
+            }
+           
+        }
+
+        int index = 0;
+
+
+        int row = twodarr.GetLength(0);
+
+
+        int col = twodarr.GetLength(1);
+
+
+        int[] onedarr = new int[row * col];
+
+
+        for (int j = 0; j < col; j++)
+        {
+            for (int i = 0; i < row; i++)
+            {
+                onedarr[index] = twodarr[i, j];
+                index++;
+            }
+        }
+
+        Console.WriteLine("1D Array Elements : ");
+        foreach (int item in onedarr)
+        {
+            Console.Write(item + " ");
+        }
+
+        Console.ReadKey();
+    }
+}
 
 
 
